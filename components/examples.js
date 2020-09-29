@@ -1,12 +1,10 @@
 import Clock from './Clock/'
 import Counter from './Counter'
-import Box from './Box'
+import { Div, H1 } from '../theme/typography'
 
 const Examples = () => {
   return (
-    <div style={{ marginBottom: 10 }}>
-      <h1>Test</h1>
-      <Box>Hello</Box>
+    <div p={20}>
       <Clock />
       <Counter />
     </div>
