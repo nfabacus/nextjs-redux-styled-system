@@ -1,4 +1,4 @@
-# Redux Thunk example
+# Redux Thunk example, plus Theme UI and Storybook
 
 This example shows how to integrate Redux and Redux Thunk in Next.js.
 
