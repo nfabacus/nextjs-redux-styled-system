@@ -1,5 +1,6 @@
 import React from 'react';
+import { Button as ThemeButton } from 'theme-ui'
 
-const Button = ({ children }) => <button>{children}</button>;
+const Button = ({children}) => <ThemeButton>{children}</ThemeButton>
 
-export default Button;
+export default Button
