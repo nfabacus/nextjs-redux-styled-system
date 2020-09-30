@@ -4,8 +4,7 @@ import Button from './index';
 // import {storiesOf} from '@storybook/react';
 
 export default {
-  title: 'Buttons',
-  component: Button
+  title: 'Buttons'
 };
 
 export const Buttons = () => {
