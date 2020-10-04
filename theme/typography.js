@@ -1,28 +1,18 @@
-import { Box, Styled, Label as ThemeLabel, Input as ThemeInput } from 'theme-ui'
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
+import { Box, Heading, Text, Label as ThemeLabel, Input as ThemeInput } from 'theme-ui'
 
 const Div = Box
 
-const H1 = (props) => <Styled.h1 { ...props } />
-const H2 = (props) => <Styled.h2 { ...props } />
-const H3 = (props) => <Styled.h3 { ...props } />
-const H4 = (props) => <Styled.h4 { ...props } />
-const H5 = (props) => <Styled.h5 { ...props } />
-const H6 = (props) => <Styled.h6 { ...props } />
-const P = (props) => <Styled.p { ...props } />
-const Span = (props) => <Styled.span { ...props } />
+const H1 = (props) => <Heading as="h1" sx={{ fontSize: 6 }} { ...props } />
+const H2 = (props) => <Heading as="h2" sx={{ fontSize: 5 }} { ...props } />
+const H3 = (props) => <Heading as="h3" sx={{ fontSize: 4 }} { ...props } />
+const H4 = (props) => <Heading as="h4" sx={{ fontSize: 3 }} { ...props } />
+const H5 = (props) => <Heading as="h5" sx={{ fontSize: 2 }} { ...props } />
+const P = (props) => <Text as="p" sx={{ fontSize: 3 }} { ...props } />
+const Span = (props) => <Text as="span" sx={{ fontSize: 3 }} { ...props } />
 const Label = (props) => <ThemeLabel { ...props } />
 const Input = (props) => <ThemeInput { ...props } />
+const HelpMessage = (props) => <Text as="p" sx={{ fontSize: 2 }} { ...props } />
 
-export { Div, H1, H2, H3, H4, H5, H6, P, Label, Span, Input }
-
-
-// export const Label = styled.label`
-//   display: block;
-//   ${selectState};
-// `;
-//
-// export const Span = styled.span`
-//   ${selectState};
-// `;
-//
-// export const Input = styled.input``;
+export { Div, H1, H2, H3, H4, H5, P, Label, Span, Input, HelpMessage }

@@ -7,13 +7,16 @@ export default {
   title: 'Buttons'
 };
 
-export const Buttons = () => {
-  return (
-    <div>
-      <h1>Buttons</h1>
-      <p>This is a description about the buttons.</p>
-    </div>
-  )
+const Template = (args) => <Button {...args}>Click</Button>;
+
+export const Primary = Template.bind({});
+Primary.args = {
+  variant: 'primary'
+};
+
+export const Secondary = Template.bind({});
+Secondary.args = {
+  variant: 'secondary'
 };
 
 export const ButtonWithText = () => <Button onClick={action('clicked')}>Click Me!!</Button>;
