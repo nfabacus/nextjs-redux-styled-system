@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { incrementCount, decrementCount, resetCount } from './redux/actions';
-import { Div, H2 } from '../../theme/typography';
+import { Div, H2 } from '../../theme/styledHtmlElements';
 import Button from '../Button';
 
 const Counter = () => {
@@ -12,9 +12,9 @@ const Counter = () => {
       <H2>
         Count: <span>{count}</span>
       </H2>
-      <Button onClick={() => dispatch(incrementCount())}>+1</Button>
-      <Button onClick={() => dispatch(decrementCount())}>-1</Button>
-      <Button onClick={() => dispatch(resetCount())}>Reset</Button>
+      <Button variant="primary" mr={2} onClick={() => dispatch(incrementCount())}>+1</Button>
+      <Button variant="primary" mr={2} onClick={() => dispatch(decrementCount())}>-1</Button>
+      <Button variant="secondary" mr={2} onClick={() => dispatch(resetCount())}>Reset</Button>
     </Div>
   )
 }

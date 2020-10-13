@@ -1,4 +1,4 @@
-import { ThemeProvider } from 'theme-ui';
+import { ThemeProvider } from 'emotion-theming';
 import { Provider } from 'react-redux';
 import { useStore } from '../store';
 

@@ -1,6 +1,6 @@
-import Clock from './Clock/'
-import Counter from './Counter'
-import { Div, H1 } from '../theme/typography'
+import Clock from './Clock/';
+import Counter from './Counter';
+import { Div, H1 } from '../theme/styledHtmlElements';
 
 const Examples = () => {
   return (
@@ -9,6 +9,6 @@ const Examples = () => {
       <Counter />
     </div>
   )
-}
+};
 
-export default Examples
+export default Examples;
