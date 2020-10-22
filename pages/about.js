@@ -9,7 +9,7 @@ const codeStyle = {
   marginBottom: 10,
 }
 
-const ShowReduxState = () => {
+const About = () => {
   const state = useSelector((state) => state)
 
   return (
@@ -24,4 +24,4 @@ const ShowReduxState = () => {
   )
 }
 
-export default ShowReduxState
+export default About

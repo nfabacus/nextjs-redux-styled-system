@@ -57,7 +57,7 @@ const Index = ({ mode, setMode }) => {
         passages, and more recently with desktop publishing software
         like Aldus PageMaker including versions of Lorem Ipsum.</P>
       <Examples />
-      <Link href="/show-redux-state">
+      <Link href="/about">
         <a>Click to see current Redux State</a>
       </Link>
     </Div>

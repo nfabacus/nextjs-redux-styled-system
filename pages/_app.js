@@ -4,7 +4,7 @@ import { ThemeProvider } from 'emotion-theming';
 import { Provider } from 'react-redux';
 import { useStore } from '../store';
 import theme from '../theme/theme.js';
-import './styles.css';
+import './app.css';
 
 const getTheme = mode => {
   const { modes, ...defaultTheme } = theme;
