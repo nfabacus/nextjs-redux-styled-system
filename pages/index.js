@@ -4,16 +4,30 @@ import Link from 'next/link';
 import { startClock } from '../components/Clock/redux/actions';
 import Examples from '../components/examples';
 import {Div, H1, H2, H3, H4, P, Span } from '../theme/styledHtmlElements';
+import Button from '../components/Button';
 
-const Index = () => {
+const Index = ({ mode, setMode }) => {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(startClock())
-  }, [dispatch])
+  }, [dispatch]);
 
   return (
-    <Div p={20}>
+    <Div bg="background.0" p={20}>
       <H1>H1 Heading</H1>
+      <Button
+        variant="primary"
+        mb={1}
+        onClick={() => {
+          if(mode === 'light') {
+            setMode('dark');
+          } else {
+            setMode('light');
+          }
+        }}
+      >
+        { mode }
+      </Button>
       <P>Lorem Ipsum is simply dummy text of the printing and
         typesetting industry. Lorem Ipsum has been the industry's
         standard dummy text ever since the 1500s, when an unknown
@@ -23,7 +37,7 @@ const Index = () => {
       <P>Lorem Ipsum is simply dummy text of the printing and
         typesetting industry. Lorem Ipsum has been the industry's
         standard dummy text ever since the 1500s, when an unknown
-        printer took <Span bg="primary">a galley of type</Span> and scrambled it to make a
+        printer took <Span bg="background.0">a galley of type</Span> and scrambled it to make a
         type specimen book.</P>
       <H3>H3 Heading</H3>
       <P>Lorem Ipsum is simply dummy text of the printing and

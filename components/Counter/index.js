@@ -14,7 +14,7 @@ const Counter = () => {
       </H2>
       <Button variant="primary" mr={2} onClick={() => dispatch(incrementCount())}>+1</Button>
       <Button variant="primary" mr={2} onClick={() => dispatch(decrementCount())}>-1</Button>
-      <Button variant="secondary" mr={2} onClick={() => dispatch(resetCount())}>Reset</Button>
+      <Button variant="info" mr={2} onClick={() => dispatch(resetCount())}>Reset</Button>
     </Div>
   )
 }

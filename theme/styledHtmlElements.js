@@ -14,27 +14,96 @@ import {
   variant
 } from 'styled-system';
 
-export const Box = styled.div`
-  ${space}
-  ${color}
-  ${typography}
-  ${layout}
-  ${flexbox}
-  ${grid}
-  ${background}
-  ${border}
-  ${position}
-  ${shadow}
-  ${variant}
-`;
+const BoxWithStyledSystem = styled.div(
+  {
+    boxSizing: 'border-box',  // to ensure that padding is included in width
+    minWidth: 0  // to ensure the Box can shrink below its minimum content size when used as a flex item.
+  },
+  space,
+  color,
+  typography,
+  layout,
+  flexbox,
+  grid,
+  background,
+  border,
+  position,
+  shadow,
+  variant
+);
 
-const Div = (props) => <Box as="div" fontFamily="body" my={3} { ...props } />;
-const H1 = (props) => <Box as="h1" fontFamily="heading" my={3} { ...props } />;
-const H2 = (props) => <Box as="h2" fontFamily="heading" my={3} { ...props } />;
-const H3 = (props) => <Box as="h3" fontFamily="heading" my={3} { ...props } />;
-const H4 = (props) => <Box as="h4" fontFamily="heading" my={3} { ...props } />;
-const P = (props) => <Box as="p" fontFamily="body" fontSize={2} mt={0} mb={2} { ...props } />;
-const Span = (props) => <Box as="span" fontFamily="body" fontSize={2} { ...props } />;
+const Box = (props) => (
+  <BoxWithStyledSystem
+    as="div"
+    fontFamily="body"
+    fontWeight="body"
+    color="color.0"
+    { ...props }
+  />
+);
+
+const Div = (props) => <Box as="div" { ...props } />;
+
+const H1 = (props) => (
+  <Box
+    as="h1"
+    fontFamily="heading"
+    fontWeight="heading"
+    fontSize={6}
+    my={3}
+    { ...props }
+  />
+);
+
+const H2 = (props) => (
+  <Box
+    as="h2"
+    fontFamily="heading"
+    fontWeight="heading"
+    fontSize={5}
+    my={3}
+    { ...props }
+  />
+);
+
+const H3 = (props) => (
+  <Box
+    as="h3"
+    fontFamily="heading"
+    fontWeight="heading"
+    fontSize={4}
+    my={3}
+    { ...props }
+  />
+);
+
+const H4 = (props) => (
+  <Box
+    as="h4"
+    fontFamily="heading"
+    fontWeight="heading"
+    fontSize={3}
+    my={3}
+    { ...props }
+  />
+);
+
+const P = (props) => (
+  <Box
+    as="p"
+    fontSize={2}
+    mt={0}
+    mb={2}
+    { ...props }
+  />
+);
+const Span = (props) => (
+  <Box
+    as="span"
+    fontSize={2}
+    { ...props }
+  />
+);
 
 const Label = (props) => (
   <Box
@@ -44,12 +113,6 @@ const Label = (props) => (
     fontFamily="body"
     fontSize={1}
     display="flex"
-    // width="100%"
-    style={{
-      boxSizing: 'border-box',
-      //   // minWidth: '0px',
-      //   // width: '100%'
-    }}
     { ...props }
   />
 );
@@ -82,4 +145,4 @@ const Small = (props) => (
   />
 );
 
-export { Div, H1, H2, H3, H4, P, Label, Span, Input, Small }
+export { Box, Div, H1, H2, H3, H4, P, Label, Span, Input, Small }
